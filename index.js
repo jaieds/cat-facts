@@ -26,9 +26,9 @@ async function setCatFacts() {
   }
 }
 
-async function run() {
-  await setCatImage();
-  await setCatFacts();
+function run() {
+  setCatImage();
+  setCatFacts();
 }
 
 window.addEventListener('load', run);
