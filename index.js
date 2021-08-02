@@ -3,6 +3,7 @@ const catsFactsURL = 'https://cat-fact.herokuapp.com/facts/random';
 
 const proImage = document.getElementById('pro-img');
 const factsList = document.getElementById('fact');
+const nextButton = document.getElementById('next');
 
 async function setCatImage() {
   try {
@@ -31,4 +32,11 @@ function run() {
   setCatImage();
 }
 
-window.addEventListener('load', run);
+function nextFact() {
+  factsList.innerHTML = '';
+  setCatFacts();
+}
+
+run();
+
+nextButton.addEventListener('click', nextFact);
