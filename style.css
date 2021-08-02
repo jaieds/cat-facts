@@ -45,7 +45,7 @@
 
 #pro-img {
   width: 100%;
-  height: 40%;
+  height: 60%;
   border-radius: 19px 19px 0 0;
   background-image: url("");
   background-position: center;
@@ -83,12 +83,13 @@
   font-size: 1.2rem;
 }
 
+div#fact {
+  overflow: auto;
+}
+
 @media screen and (min-width: 320px) and (max-width: 768px) {
   .card {
     width: 90%;
     height: 90vh;
-  }
-  #fact {
-    overflow: scroll;
   }
 }
