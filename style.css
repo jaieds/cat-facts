@@ -1,0 +1,94 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.background {
+  position: fixed;
+  z-index: -10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #56c6cecc;
+  background-image: url("background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-origin: content-box;
+  background-size: cover;
+  filter: blur(8px);
+}
+
+.container {
+  position: relative;
+  width: 95%;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.card {
+  width: 550px;
+  height: 480px;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  background-color: #df853b27;
+  border-radius: 19px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 10px 3px #77777755, 0 5px 10px 3px #77777755;
+}
+
+#pro-img {
+  width: 100%;
+  height: 40%;
+  border-radius: 19px 19px 0 0;
+  background-image: url("https://i.thatcopy.pw/cat/N2puzyr.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.details {
+  padding: 18px;
+}
+
+.details h1 {
+  color: #2c2c2c;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #727272;
+}
+
+.details > hr {
+  margin-top: 20px;
+}
+
+#pro-img > hr {
+  margin-bottom: 20px;
+}
+
+.footer {
+  font-size: 0.7rem;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+#fact {
+  margin-top: 18px;
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .card {
+    width: 300px;
+    height: 90vh;
+  }
+  #fact {
+    overflow: scroll;
+  }
+}
