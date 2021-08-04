@@ -18,7 +18,7 @@ const imagesArray = [
   '11.jpg',
 ];
 
-async function setCatImage() {
+function setCatImage() {
   try {
     const rndIndx = Math.floor(Math.random() * 12);
     proImage.style.backgroundImage = `url("/cat-facts/images/${imagesArray[rndIndx]}")`;
@@ -31,9 +31,7 @@ async function setCatFacts() {
   try {
     const data = await fetch(catsFactsURL);
     const fact = await data.json();
-    const listElement = document.createElement('p');
-    listElement.innerText = fact.fact;
-    factsList.appendChild(listElement);
+    factsList.innerHTML = `<p>${fact.fact}</p>`;
   } catch (e) {
     console.log(e);
   }
