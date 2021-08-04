@@ -20,8 +20,7 @@ const imagesArray = [
 
 async function setCatImage() {
   try {
-    const rndIndx = Math.floor(Math.random() * 10 + 2);
-    console.log(rndIndx);
+    const rndIndx = Math.floor(Math.random() * 12);
     proImage.style.backgroundImage = `url("/images/${imagesArray[rndIndx]}")`;
   } catch (e) {
     console.log(e);
